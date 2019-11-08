@@ -6,9 +6,10 @@ import { AppService } from './app.service';
 import { IdeaModule } from './idea/idea.module';
 import { HttpErrorFilter } from './shared/http-error.filter';
 import { LoggingInterceptor } from './shared/logging.interceptor';
+import { UserModule } from './user/user.module';
 
 @Module({
-  imports: [IdeaModule, TypeOrmModule.forRoot()],
+  imports: [IdeaModule, TypeOrmModule.forRoot(), UserModule],
   controllers: [AppController],
   providers: [
     AppService, 
